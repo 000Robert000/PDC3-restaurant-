@@ -12,8 +12,8 @@ class Menus extends Model
 
     public function products()
     {
-        return $this->belongsToMany(Products::class, 'menu_products', 'menu_id', 'product_id');
+        return $this->belongsToMany(Products::class, 'menu_products', 'menu_id', 'product_id')
+                ->withPivot('id');
     }
-     protected $hidden = ['pivot'];
 }
 

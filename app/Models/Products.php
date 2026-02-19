@@ -11,5 +11,4 @@ class Products extends Model
     'price', 
     'image_path'
 ];
- protected $hidden = ['pivot'];
 }

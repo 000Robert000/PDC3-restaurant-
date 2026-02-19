@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MenuProducts;
-use App\Models\Menus; // Fix: Needed for the index() method
+use App\Models\Menus;
 use Illuminate\Http\Request;
 
 class MenuProductsController extends Controller
@@ -13,7 +13,6 @@ class MenuProductsController extends Controller
      */
     public function index()
     {
-        // This gives you the exact nested structure you asked for
         $data = Menus::with('products')->get();
         return response()->json($data, 200);
     }

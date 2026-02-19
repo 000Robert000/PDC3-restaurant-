@@ -22,5 +22,5 @@ class MenuProducts extends Model
     {
     return $this->belongsTo(Products::class, 'product_id');
     }
-    protected $hidden = ['pivot'];
+
 }
